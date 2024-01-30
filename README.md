@@ -14,7 +14,7 @@
 сложениот механизам на работење на секој чекор.<br/>
 
 **Користени библиотеки** <br/><br/>
-![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/e8528a38-d252-42d0-baec-a3dfd1dbc330)
+- ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/e8528a38-d252-42d0-baec-a3dfd1dbc330)
 
 **Вчитување на слика**
 - Најпрво вчитуваме една слика во случајов “car_5.png” преку функцијата
@@ -36,4 +36,19 @@ cv2.cvtColor() и одбираме cv2.COLOR_BGR2GRAY, односно да се 
 <br/><br/>
 ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/efca5548-b0bd-474d-9d47-4d097a897b55)
 
+**Наогање на рабови**
+- Во оваа ситуација најдобро одговара Canny Edge Detector. Тој е познат по
+отпорнаста на шум, со што се откриваат само значајните рабови. Работи на принцип на
+прво изгладнување (Smoothing), после бара нагли промени во градиентот на боите, се
+отргнуваат слабите рабови и за крај со “Hysteresis” се поврзуваат пикселите на рабовите со
+предвидување. Ова прави непрекинати рабови и ги елеминира изолираните пиксели.<br/><br/>
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/08c28eba-80a3-4e61-a445-05c1098463f7)
+<br/><br/>
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/894e8562-daff-48fe-a715-98c09f5b1dc0)
+
+**Барање на правоаголник**
+- Следен чекор за најдеме таблицата е да најдеме перфектен четириаголник на
+сликата. Тоа ке направиме со неколку чекори. Најпрво треба да ги најдеме контурите во
+сликата со функцијата cv2.findContours(). Ова ни врака листа од сите контури пронајдени
+на сликата според “keypoints”. <br/><br/>
 

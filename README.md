@@ -14,7 +14,7 @@
 сложениот механизам на работење на секој чекор.<br/>
 
 **Користени библиотеки** <br/><br/>
-- ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/e8528a38-d252-42d0-baec-a3dfd1dbc330)
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/e8528a38-d252-42d0-baec-a3dfd1dbc330)
 
 **Вчитување на слика**
 - Најпрво вчитуваме една слика во случајов “car_5.png” преку функцијата
@@ -91,7 +91,7 @@ cv2.cvtColor() и одбираме cv2.COLOR_BGR2GRAY, односно да се 
 ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/97c163ba-8f91-4f4e-a7c8-a733030311e2)
 ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/f74f53f3-325d-4b64-ae11-63939184b385)
 
--И за крај го отсрануваме црниот дел од сликата и ни останува само регистрацијата
+- И за крај го отсрануваме црниот дел од сликата и ни останува само регистрацијата
 на посебна слика. Тоа го правиме со следниот код.<br/><br/>
 ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/5f449d0a-003e-4707-a93d-66b199397401)
 ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/5396897a-c7ba-452b-8c6a-38f00907fb36)

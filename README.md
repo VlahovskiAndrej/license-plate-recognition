@@ -51,12 +51,15 @@ cv2.cvtColor() и одбираме cv2.COLOR_BGR2GRAY, односно да се 
 сликата. Тоа ке направиме со неколку чекори. Најпрво треба да ги најдеме контурите во
 сликата со функцијата cv2.findContours(). Ова ни врака листа од сите контури пронајдени
 на сликата според “keypoints”. <br/><br/>
-
+- ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/f27a97f6-34ad-41ba-8fde-b734dc4ac442)
+- ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/e90cfee6-03a1-495d-b0a4-e6dfdc0d24cb)
+- ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/df686703-c83f-493c-a83b-f748feb6d915)
+- ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/350179c3-922e-4f6b-b2d8-4edbdb0affe7)
+  
 - За од овие “keypoints” да ги добиеме вистинските контурни линии ја користиме
 функцијата од imutils: imutils.grab_contours(keypoints)
 - После ова за да го олесниме процесот на избирање правоаголник ке ги одбереме
 100те најголеми контури. Ова го правиме со методот sorted()
 - Следно треба да ја најдеме најголемата форма која има 4 рабови.
-- Кодот за овие работи може да се види во документот наведен погоре.
 - ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/614e96c1-902d-40b0-b57f-44b0a8170523)
 

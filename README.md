@@ -61,6 +61,37 @@ cv2.cvtColor() и одбираме cv2.COLOR_BGR2GRAY, односно да се 
 100те најголеми контури. Ова го правиме со методот sorted()
 - Следно треба да ја најдеме најголемата форма која има 4 рабови.
   ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/0d45eaa1-f92b-468b-b5a0-821fe7c25b48)
+  ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/db225065-30b9-4464-a53a-03ef0275c5c8)
 
-  ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/614e96c1-902d-40b0-b57f-44b0a8170523)
+**Креирање на маска**
+- Најпрово иницијализираме црна маска со истите димензии како сликата.
+Функцијата np.zeros() од NumPy се користи за да се создаде низа исполнета со нули.
+Податочниот тип е специфициран како np.uint8, што значи дека секој пиксел во маската
+може да има вредности во опсегот [0, 255]. Почетно, сите пиксели во маската се поставени
+на 0, односно се црни.<br/><br/>
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/6f328abc-b26b-4677-bfdf-23073b33855d)
 
+- После ова треба контурата дефинирана со променливата location (која претставува
+четириаголник) да се нацрта врз маската. Функцијата cv2.drawContours() го прави тоа со
+примање на неколку аргументи:
+0: Индексот на контурата во листата. Во овој случај, има само една контура во листата, па
+нејзиниот индекс е 0.
+255: Вредноста на бојата која сакате да се користи за цртање на контурата. Тука е
+поставена на 255, што одговара на бела боја.
+-1: Овој параметар специфицира дека сакате да го исполните контурата со одредената боја.
+Практично, целата област затворена со контурата станува бела на маската.
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/95c5ad7a-345f-45d1-b697-957fa0eb94ed)
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/c4165274-e3d2-43cb-91c2-e5fa7f9439c1)
+
+- Следно извршуваме операција на битово И (Bitwise AND) помеѓу оригиналната
+слика (img) и маската (mask) користејќи ја функцијата cv2.bitwise_and().
+Резултатот од оваа операција е нова слика каде само регионот специфициран со
+маската е видлив, а останатата слика е црна. Практично, ja изолира областа од сликата која
+одговара на детектираната контура.
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/97c163ba-8f91-4f4e-a7c8-a733030311e2)
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/f74f53f3-325d-4b64-ae11-63939184b385)
+
+-И за крај го отсрануваме црниот дел од сликата и ни останува само регистрацијата
+на посебна слика. Тоа го правиме со следниот код
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/5f449d0a-003e-4707-a93d-66b199397401)
+![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/5396897a-c7ba-452b-8c6a-38f00907fb36)

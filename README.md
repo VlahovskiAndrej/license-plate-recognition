@@ -8,7 +8,7 @@
 сложениот механизам на работење на секој чекор.<br/>
 
 **Користени библиотеки** <br/><br/>
-![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/e8528a38-d252-42d0-baec-a3dfd1dbc330)
+  ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/e8528a38-d252-42d0-baec-a3dfd1dbc330)
 
 **Вчитување на слика**
 - Најпрво вчитуваме една слика во случајов “car_5.png” преку функцијата

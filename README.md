@@ -60,6 +60,6 @@ cv2.cvtColor() и одбираме cv2.COLOR_BGR2GRAY, односно да се 
 - После ова за да го олесниме процесот на избирање правоаголник ке ги одбереме
 100те најголеми контури. Ова го правиме со методот sorted()
 - Следно треба да ја најдеме најголемата форма која има 4 рабови.
--  ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/350179c3-922e-4f6b-b2d8-4edbdb0affe7)
+- ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/350179c3-922e-4f6b-b2d84edbdb0affe7)
 - ![image](https://github.com/VlahovskiAndrej/license-plate-recognition/assets/95543841/614e96c1-902d-40b0-b57f-44b0a8170523)
 
